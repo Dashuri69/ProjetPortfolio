@@ -8,10 +8,24 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ElionController extends AbstractController
 {
-    #[Route('/elion', name: 'app_elion')]
+    #[Route('/site', name: 'app_site')]
     public function index(): Response
     {
-        return $this->render('elion/index.html.twig', [
+        return $this->render('site/index.html.twig', [
+            'controller_name' => 'ElionController',
+        ]);
+    }
+    #[Route('/page2', name: 'app_page2')]
+    public function page2(): Response
+    {
+        return $this->render('site/page2.html.twig', [
+            'controller_name' => 'ElionController',
+        ]);
+    }
+    #[Route('/page3', name: 'app_page3')]
+    public function page3(): Response
+    {
+        return $this->render('site/page3.html.twig', [
             'controller_name' => 'ElionController',
         ]);
     }
