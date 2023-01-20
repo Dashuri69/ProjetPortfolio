@@ -7,11 +7,61 @@
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
-
-<div class="example-wrapper">
-    <h1>Ici on va retrouver le <strong>CV</strong>!
-
-</div>
+<head>
+    <title>Messagerie</title>
+  </head>
+  <body>
+    <h1>Messagerie</h1>
+    <form id="message-form">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" required></textarea>
+      <br>
+      <input type="submit" value="Envoyer">
+    </form>
+    <div id="message-response"></div>
+    <script>
+      // Obtenir une référence au formulaire
+      var form = document.getElementById('message-form');
+      
+      // Ajouter un gestionnaire d'événement pour soumettre le formulaire
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Obtenir les valeurs des champs de formulaire
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        
+        // Vérifiez si les champs sont remplis
+        if (name && email && message) {
+          // Envoyer les données du formulaire à une URL de traitement (comme un script PHP ou un endpoint de l'API)
+          // Vous devriez utiliser une bibliothèque de requêtes HTTP pour envoyer les données
+          // Exemple avec la bibliothèque Fetch :
+          /*
+          fetch('/send-message', {
+            method: 'POST',
+            body: JSON.stringify({ name: name, email: email, message: message }),
+            headers: { 'Content-Type': 'application/json' },
+          })
+            .then(function(response) {
+              return response.json();
+            })
+            .then(function(data) {
+              // Afficher une réponse à l'utilisateur
+              var responseDiv = document.getElementById('message-response');
+              responseDiv.innerHTML = data.message;
+            });
+          */
+        }
+      });
+    </script>
+  </body>
 
 <footer>
 Copyright © 2023. Tout droits réservés E.LATIFI
