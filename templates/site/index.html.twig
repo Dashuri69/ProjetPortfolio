@@ -7,32 +7,36 @@
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
-
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 <div class="example-wrapper">
-    <h1>Salut, ici c'est la page d'accueil ✅</h1>
+    <h1>Bienvenue sur la page d'accueil </h1>
 </div>
 <body>
-<div class="container">
-   <div class="row">
-      <div class="col">
-         <div>
-            <h2>Informations personnelles</h2>
-            <p>Nom : Elion Latifi</p>
-            <p>Téléphone : 07-67-70-10-58</p>
-            <p>Email : <a href="mailto:elion.latifi@etu.univ-st-etienne.fr">elion.latifi@etu.univ-st-etienne.fr</a></p>
-            </div>
-      </div>
-      <div class="col">
-         Deuxième colonne<br>
-         Ici on aura quelques détails
-      </div>
-   </div>
-</div>
+<div class="personal-info">
+   <h2>Informations personnelles</h2>
+   <ul>
+      <p>Nom : Elion Latifi</p>
+      <p>Téléphone : 07-67-70-10-58</p>
+      <p>Email : <a href="mailto:elion.latifi@etu.univ-st-etienne.fr">elion.latifi@etu.univ-st-etienne.fr</a></p>
+      <p>Ville : Roanne , Lyon</p>
+   </ul>
+ </div>
+  
+  <figure class="text-center">
+  <blockquote class="blockquote">
+    <p class="mb-0">Le talent ne suffit pas, il faut de l'expérience, de la persévérance et de l'ambition pour transformer le rêve en réalité</p>
+  
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Citation retrouvée sur  <cite title="Source Title">Internet</cite>
+  </figcaption>
+</figure>
+<a href="page4" class="blue-button">En savoir plus</a>
 </body>
 
 
 
-<footer>
-<p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> E.LATIFI</p>
-</footer>
+
 {% endblock %}
