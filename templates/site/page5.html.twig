@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Emplois du temps !{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<head>
+<link rel="stylesheet" href="edt.css">
+</head>
+
+<div class="example-wrapper">
+    <h1>Mon Emplois du Temps<h1> 
+
+</div>
+
+<body>
+<div class="schedule-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Heures</th>
+        <th>Lundi</th>
+        <th>Mardi</th>
+        <th>Mercredi</th>
+        <th>Jeudi</th>
+        <th>Vendredi</th>
+        <th>Samedi</th>
+        <th>Dimanche</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>06h00-8h00</td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+      </tr>
+      <tr>
+        <td>08h00-10h00</td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+      </tr>
+      <tr>
+        <td>10h00-12h00</td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+      </tr>
+      <tr>
+        <td>14h00-16h00</td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+      </tr>
+      <tr>
+        <td>16h00-18h00</td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+      </tr>
+      <tr>
+        <td>18h00-20h00</td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+      </tr>
+      <tr>
+        <td>20h00-22h00</td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+      </tr>
+      <tr>
+        <td>22h00-00h00</td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="unavailable"></td>
+      </tr>
+      <!-- Ajoutez autant de lignes que nécessaire pour couvrir toutes les heures de la journée -->
+    </tbody>
+  </table>
+</div>
+</body>
+
+
+
+{% endblock %}
+    
