@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+
+.blue-button {
+    background-color: #4CAF50; /* Définit la couleur de fond */
+    color: #fff; /* Définit la couleur du texte */
+    padding: 10px 15px; /* Définit l'espacement intérieur */
+    border-radius: 5px; /* Définit les coins arrondis */
+    text-decoration: none; /* Supprime la surbrillance du lien */
+    text-align: center; /* Centre le texte */
+    display: inline-block; /* Affiche le bouton comme un élément en ligne */
+    margin-left: 700px ;
+}
+
+
+
+
+
+.personal-info {
+    width: 500px; /* Définit la largeur de l'encadré */
+    /*margin-right: 20px; /* Ajoute de l'espacement à droite de l'encadré */
+    /*margin-left: 50px; */
+    margin: 50px auto;
+    animation: rotate 0.5s ease-in-out; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+    border: 1px solid #4CAF50;
+    box-shadow: 2px 2px 5px #4CAF50;
+    
+  }
+  @keyframes rotate {
+    from {transform: rotate(0deg);} /* Définit la rotation de départ */
+    to {transform: rotate(360deg);} /* Définit la rotation finale */
+  }
+  
+  .personal-info h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .personal-info li {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+.personal-info li span {
+    font-weight: bold;
+  }
+.personal-info:hover {
+    animation-play-state: running; /* Lance l'animation lorsque la souris survole l'encadré */
+  }
+
+  footer
+  {
+      text-align:center;
+      bottom:0;
+      width:100%;
+      display:inline-block;
+      vertical-align:top;
+      font-size:13px;
+  }
