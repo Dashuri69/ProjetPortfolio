@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Téléchargement{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<head>
+<link rel="stylesheet" href="download.css">
+</head>
+<div class="example-wrapper">
+    <h1>Formulaire pour le téléchargement</h1> 
+
+</div>
+
+<body>
+<div class="form-container">
+<form id="form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="prenom">Prenom:</label>
+    <input type="text" id="prenom" name="prenom"><br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email"><br><br>
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company"><br><br>
+    <input type="submit" value="Submit" onclick="validateForm()">
+</form>
+</div>
+
+<script>
+  function validateForm() {
+    var name = document.getElementById("name").value;
+    var prenom = document.getElementById("prenom").value;
+    var email = document.getElementById("email").value;
+    var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (name && prenom && emailRegex.test(email)) {
+        window.location.href = 'cv_elion.pdf';
+    } else {
+        alert("Veuillez remplir tous les champs obligatoires et un email valide");
+    }
+  }
+
+  const form = document.getElementById("form");
+
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Empêche la soumission par défaut
+
+    // Récupération des données du formulaire
+    const name = document.getElementById("name").value;
+    const prenom = document.getElementById("prenom").value;
+    const email = document.getElementById("email").value;
+    const company = document.getElementById("company").value;
+
+    // Préparation des données pour écrit
+    // Préparation des données pour écriture dans le fichier
+    const data = "Name: " + name + "\nPrenom: " + prenom + "\nEmail: " + email + "\nCompany: " + company + "\n\n";
+
+    // Utilisation d'un objet Blob pour créer un fichier texte
+    const file = new Blob([data], { type: 'text/plain' });
+
+    // Création d'un lien pour télécharger le fichier
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(file);
+   // a.download = "form_data.txt";
+   // a.click();
+});
+
+</script>
+
+</body>
+
+
+
+{% endblock %}
+    
