@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Salut ElionController!{% endblock %}
+{% block title %}CV!{% endblock %}
 
 {% block body %}
 <style>
@@ -8,12 +8,79 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 <head>
+<div class="example-wrapper">
+  <h1>Curriculum vitæ</h1>
+  <h2>Expert en CyberSécurité</h2>
+</div>
+<link rel="stylesheet" href="style2.css">
+<script src="https://kit.fontawesome.com/f79886d2c3.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="fonts/font-awesome.min.css">
+
 </head>
+
+
+
+
+
 <body>
+<a href="page6" class="blue-button">Télécharger le CV.</a>
+<div class="cv-container">
+  <section class="section-formations">
+    <h2> Formations</h2>
+    <ul>
+      <li>
+        <h3>Baccalauréat Général</h3>
+        <p>Spécialité Numérique et Sciences Informatiques</p>
+        <p>Lycée Lacassagne - 2019-2022</p>
+      </li>
+      <li>
+        <h3>B.U.T Réseaux&Télécom</h3>
+        <p>Institut Universitaire Technologique de Roanne - 2022-2025</p>
+      </li>
+    </ul>
+  </section>
+  <section class="section-experience">
+    <h2>Expérience pro</h2>
+    <ul>
+      <li>
+        <h3>Plaquiste</h3>
+        <p>Bosbat - 2020-2021</p>
+        <p>Réalisation de projets en équipe. Maniement d’outils tels que équerre, niveau, perceuses. Prise de mesures, traçage, collage et application d’enduit.</p>
+      </li>
+      
+    </ul>
+  </section>
+  <section class="section-competences">
+    <h2>Compétences</h2>
+    <ul>
+      <li>Développement web (HTML, CSS, JavaScript, PHP)</li>
+      <li>Analyse de données (Python, SQL)</li>
+      <li>Gestion de projet</li>
+      <li>Programmation (Python, C)</li>
+      <li>Maitrise de la suite Microsoft. (Texte, exel,powerpoint, etc)</li>
+    </ul>
+  </section>
+  <section class="section-langues">
+    <h2>Langues</h2>
+    <ul>
+      <li>Français</li>
+      <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <li>Albanais</li>
+      <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <li>Anglais</li>
+      <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
 
-  </body>
+    </ul>
+  </section>
 
-<footer>
-<p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> E.LATIFI</p>
-</footer>
+</div>
+</body>
+
+
 {% endblock %}
