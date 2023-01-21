@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+.schedule-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+
+td:hover {
+    background-color: #ddd;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    color: rgb(12, 176, 137);
+    background-color: #f2f2f2;
+    font-size: 1.2em;
+  }
+  
+  .available {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  .unavailable {
+    background-color: #f44336;
+    color: #fff;
+  }
+
+td {
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+  footer
+  {
+      text-align:center;
+      
+      bottom:0;
+      width:100%;
+      display:inline-block;
+      vertical-align:top;
+      font-size:13px;
+  } 
+  
