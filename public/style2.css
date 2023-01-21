@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+
+.blue-button {
+    background-color: #4CAF50; /* Définit la couleur de fond */
+    color: #fff; /* Définit la couleur du texte */
+    padding: 10px 15px; /* Définit l'espacement intérieur */
+    border-radius: 5px; /* Définit les coins arrondis */
+    text-decoration: none; /* Supprime la surbrillance du lien */
+    text-align: center; /* Centre le texte */
+    display: inline-block; /* Affiche le bouton comme un élément en ligne */
+    margin-left: 150px ;
+    margin-bottom: 5px;
+}
+
+
+
+
+.section-langues h2::before{
+    content: "\f7a2";
+    font-family: FontAwesome;
+    margin-right: 10px;
+}
+.section-experience h2::before {
+    content: "\f0f2";
+    font-family: FontAwesome;
+    margin-right: 10px;
+  }
+
+
+
+.section-competences h2::before {
+    content: "\f02d";
+    font-family: FontAwesome;
+    margin-right: 10px;
+  }
+
+
+.section-formations h2::before {
+    content: "\f19d";
+    font-family: FontAwesome;
+    margin-right: 10px;
+  }
+
+  .section-formations h3, .section-experience h3, .section-langues h3 {
+    color: #009688;
+  }
+
+
+.section-formations, .section-experience, .section-competences, .section-langues {
+    border: 1px solid #4CAF50;
+    box-shadow: 2px 2px 5px #4CAF50;
+    padding: 20px;
+  }
+.cv-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .section-formations, .section-experience, .section-competences, .section-langues {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: #4CAF50;
+  }
+  
+  li {
+    margin-bottom: 15px;
+  }
+ 
+  footer
+  {
+      text-align:center;
+      
+      bottom:0;
+      width:100%;
+      display:inline-block;
+      vertical-align:top;
+      font-size:13px;
+  }
