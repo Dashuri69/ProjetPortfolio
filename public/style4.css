@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .hobby {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    padding: 20px;
+    background-color: #40c145;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    
+  }
+  
+  .hobby img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .hobby p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border: 1px solid #ccc;
+  }
+  
