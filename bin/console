@@ -1,4 +1,4 @@
-#!/usr/bin/env php
+#!/usr/bin/env C:\wamp64\bin\php\php8.2.0
 <?php
 
 use App\Kernel;
