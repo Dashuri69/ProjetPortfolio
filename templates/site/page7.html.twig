@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projets{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { 
+        margin: 2em auto; 
+        max-width: 1000px; 
+        width: 95%; 
+        font: 18px/1.5 sans-serif; 
+    }
+    .project-card { 
+        background: #f8f9fa; 
+        padding: 20px; 
+        border-radius: 8px; 
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+        margin-bottom: 20px; 
+        display: flex; 
+        align-items: center; 
+    }
+    .project-card img { 
+        max-width: 150px; 
+        border-radius: 8px; 
+        margin-right: 20px; 
+    }
+    .project-content { 
+        flex-grow: 1; 
+    }
+    .project-card h3 { 
+        color: #28a745; 
+        font-size: 24px; 
+        margin-bottom: 10px; 
+    }
+    .project-card p { 
+        font-size: 16px; 
+        margin-bottom: 10px; 
+    }
+    .project-card a { 
+        text-decoration: none; 
+        padding: 10px 15px; 
+        background: #28a745; 
+        color: white; 
+        border-radius: 5px; 
+    }
+    .project-card a:hover { 
+        background: #218838; 
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Mes Projets Informatiques</h1>
+
+    <div class="project-card">
+        <img src="/path/to/image1.jpg" alt="Système de Sécurisation des Réseaux">
+        <div class="project-content">
+            <h3>Système de Sécurisation des Réseaux</h3>
+            <p>Un projet où j'ai utilisé des outils comme Suricata et Fail2Ban pour sécuriser l'infrastructure d'un réseau d'entreprise, tout en surveillant les menaces et en générant des alertes via Graylog.</p>
+            <a href="/projets/securisation-reseaux">En savoir plus</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/path/to/image2.jpg" alt="Automatisation du Déploiement avec Ansible">
+        <div class="project-content">
+            <h3>Automatisation du Déploiement avec Ansible</h3>
+            <p>J'ai créé des scripts Ansible pour automatiser le déploiement de serveurs et la gestion des configurations dans des environnements de production, afin de garantir une gestion cohérente et rapide des infrastructures.</p>
+            <a href="/projets/automatisation-ansible">En savoir plus</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/path/to/image4.jpg" alt="Surveillance et Analyse des Logs avec Graylog">
+        <div class="project-content">
+            <h3>Surveillance et Analyse des Logs avec Graylog</h3>
+            <p>Un projet dans lequel j'ai intégré Graylog pour la collecte, l'analyse et l'affichage des logs des serveurs, permettant une meilleure gestion des incidents et une visibilité accrue sur les systèmes.</p>
+            <a href="/projets/surveillance-graylog">En savoir plus</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/path/to/image5.jpg" alt="Configuration et Sécurisation des Réseaux VPN">
+        <div class="project-content">
+            <h3>Configuration et Sécurisation des Réseaux VPN</h3>
+            <p>J'ai configuré des réseaux privés virtuels (VPN) pour sécuriser les connexions à distance des employés et garantir la confidentialité des échanges de données sensibles entre les différents sites de l'entreprise.</p>
+            <a href="/projets/secure-vpn">En savoir plus</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="/path/to/image6.jpg" alt="Gestion de Systèmes avec Docker et Kubernetes">
+        <div class="project-content">
+            <h3>Gestion de Systèmes avec Docker et Kubernetes</h3>
+            <p>Un projet où j'ai utilisé Docker et Kubernetes pour créer des environnements de développement et de production évolutifs, facilitant le déploiement d'applications dans des conteneurs et leur orchestration à grande échelle.</p>
+            <a href="/projets/docker-kubernetes">En savoir plus</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

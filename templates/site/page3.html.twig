@@ -3,45 +3,85 @@
 {% block title %}Compétences{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 <head>
-<link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .container { max-width: 1000px; margin: 20px auto; font: 18px/1.5 sans-serif; text-align: center; }
+        .competences-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .competence-card { background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+        .progress { margin-top: 10px; height: 20px; }
+        .progress-bar { text-align: center; font-weight: bold; }
+        .download-button { margin-top: 20px; padding: 10px 15px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; display: inline-block; }
+        .download-button:hover { background: #218838; }
+
+        .skills-description { margin-top: 40px; text-align: left; }
+        .skills-description .skills-description-card { background: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
+        .skills-description h3 { font-size: 20px; color: #28a745; margin-bottom: 10px; }
+        .skills-description p { font-size: 16px; line-height: 1.6; }
+    </style>
 </head>
-<div class="example-wrapper">
-    <h1>Portfolio des <strong>compétences</strong> ! 
-
-</div>
 <body>
-<h2>Compétences</h2>
-    <ul>
-      <li>Lire, exécuter, corriger et modifier un programme</li>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="90"></div>
-        </div>
-      <li>Traduire un algorithme, dans un langage et pour un environnement donné </li>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-      <li> Communiquer avec un client ou un collaborateur</li>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 76%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-      <li> Connaître l’architecture et les technologies d’un site Web</li>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 83%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    <li>S’intégrer dans un environnement propice au développement et au travail collaboratif</li>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    <li>Configurer les fonctions de base du réseau local</li>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-</body>
+    <div class="container">
+        <h2>Compétences</h2>
+        <div class="competences-grid">
+            {% set competences = [
+                { "titre": "Lire, exécuter, corriger et modifier un programme", "niveau": 100 },
+                { "titre": "Sécuriser les systèmes d’exploitation", "niveau": 78 },
+                { "titre": "Communiquer avec un client ou un collaborateur", "niveau": 90 },
+                { "titre": "Connaître l’architecture et les technologies d’un site Web", "niveau": 95 },
+                { "titre": "Surveiller l’activité du système d’information", "niveau": 80 },
+                { "titre": "Configurer les fonctions de base du réseau local", "niveau": 85 },
+                { "titre": "Mettre en place un environnement de travail collaboratif informatique", "niveau": 80 },
+                { "titre": "Déployer et maintenir une solution informatique", "niveau": 88 },
+                { "titre": "Administrer les outils de surveillance du système d’information", "niveau": 84 },
+                { "titre": "Proposer une architecture sécurisée de système d’information pour une petite structure", "niveau": 82 },
+                { "titre": "Mettre en oeuvre des outils avancés de sécurisation d’une infrastructure du réseau", "niveau": 80 },
+                { "titre": "Appliquer une méthodologie de tests de pénétration", "niveau": 75 }
+            ] %}
 
+            {% for competence in competences %}
+                <div class="competence-card">
+                    <p><strong>{{ competence.titre }}</strong></p>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: {{ competence.niveau }}%;" aria-valuenow="{{ competence.niveau }}" aria-valuemin="0" aria-valuemax="100">
+                            {{ competence.niveau }}%
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="skills-description">
+            <div class="skills-description-card">
+                <h3>Administrer les réseaux et l’Internet (RT1)</h3>
+                <p>Description : Au cours de cette compétence, j'ai eu l'opportunité de m'impliquer dans l'administration des réseaux et des services Internet, une tâche essentielle pour garantir le bon fonctionnement des systèmes d'information d'une entreprise. Cela a inclus la configuration des équipements réseau, la gestion des adresses IP, l'optimisation du trafic et la sécurisation des connexions. J'ai appris à résoudre des pannes, à mettre en place des protocoles de sécurité comme les VPN et à assurer la maintenance de l'infrastructure.</p>
+                <p>Sentiments : Au début, j'ai ressenti un certain stress face à l'ampleur des tâches à accomplir, surtout lorsque des problèmes imprévus survenaient. La pression était parfois lourde, car un réseau qui tombe peut causer des perturbations importantes pour une entreprise. Cependant, au fil du temps, cette pression s'est transformée en une véritable source de motivation. J'ai pris conscience de l'impact direct de mes actions sur la performance globale des systèmes et cela m'a donné un sentiment d'accomplissement. Quand un réseau fonctionnait parfaitement après que j'avais résolu un problème complexe, cela générait un immense sentiment de satisfaction et de fierté.</p>
+                <p>Évaluation : Cette expérience m'a appris que l'administration des réseaux est une tâche complexe qui nécessite une expertise technique pointue et une capacité d'adaptation rapide. J'ai acquis une meilleure compréhension de l'importance de la sécurité et de la maintenance préventive. Cependant, la gestion simultanée de plusieurs outils et de différentes couches du réseau m'a parfois semblé accablante. Je suis convaincu que j'aurais pu être plus efficace si j'avais mieux planifié mes priorités, notamment en cas de panne grave. Une meilleure organisation en amont aurait probablement permis de résoudre certains problèmes plus rapidement.</p>
+                <p>Analyse : En réfléchissant à cette expérience, je réalise que l'administration des réseaux n'est pas seulement une question de compétences techniques, mais aussi de gestion du temps et de réactivité face à des situations imprévues. Une bonne gestion du réseau repose sur une anticipation des problèmes potentiels, ainsi que sur une surveillance constante pour éviter les incidents. La capacité à résoudre les problèmes rapidement et efficacement est indispensable pour minimiser les impacts sur les utilisateurs finaux et garantir la continuité des activités de l'entreprise.</p>
+                <p>Conclusion : L'administration des réseaux et de l'Internet est une compétence clé, qui nécessite à la fois une expertise technique et une capacité à gérer les urgences. Cette expérience m'a permis de renforcer ma résilience et ma capacité à travailler sous pression. J'ai compris que pour gérer efficacement un réseau, il faut aussi se préparer à l'imprévu et être en constante veille.</p>
+                <p>Plan d'action : À l'avenir, je compte me perfectionner en gestion des infrastructures cloud et dans la virtualisation des réseaux pour être encore plus réactif face aux demandes des entreprises. Je vais également explorer les outils de monitoring avancés afin de renforcer la prévention des incidents, plutôt que de se concentrer uniquement sur la résolution.</p>
+            </div>
+            <div class="skills-description-card">
+                <h3>Connecter les entreprises et les usagers (RT2)</h3>
+                <p>Description : Cette compétence m'a permis de comprendre les enjeux cruciaux de la connectivité entre les entreprises et leurs usagers. J'ai travaillé sur des solutions permettant de garantir des connexions sécurisées et fiables, en utilisant des VPN, des réseaux privés virtuels, et des solutions adaptées pour les échanges de données. </p>
+                <p>Sentiments : L'une des premières choses que j'ai ressenties en travaillant sur cette compétence a été un véritable défi technique. Assurer une connexion fiable et sécurisée, tout en prenant en compte les besoins des usagers, n'est pas une tâche facile. Parfois, les différences de configurations et d'environnement entre les entreprises et les usagers ont rendu les solutions complexes. Mais en surmontant ces difficultés, j'ai ressenti une immense fierté de pouvoir fournir une solution qui répondait aux attentes de mes utilisateurs. Voir les entreprises et les utilisateurs finaliser une connexion réussie m'a donné un sentiment de réalisation personnelle.</p>
+                <p>Évaluation : Je considère cette expérience comme très enrichissante. Grâce à elle, j'ai compris que la connectivité n'est pas uniquement une question technique, mais aussi stratégique. Elle a des impacts directs sur la productivité et la satisfaction des utilisateurs. Cependant, il y a eu des moments où la gestion des demandes et la résolution de problèmes techniques ont nécessité une grande flexibilité. L'équilibre entre la sécurité et la performance des connexions reste une problématique complexe à résoudre.</p>
+                <p>Analyse : La connectivité est au cœur des opérations modernes, et chaque entreprise doit s'assurer que ses usagers, qu'ils soient internes ou externes, puissent accéder aux ressources et services de manière rapide et sécurisée. Ce processus va au-delà de la simple installation de technologies : il faut comprendre les besoins spécifiques de chaque utilisateur et s'assurer que les solutions mises en place soient évolutives. L'intégration de la sécurité dans la conception des connexions et des échanges de données est un enjeu majeur, car une faille peut rapidement devenir un vecteur de cyberattaque.</p>
+                <p>Conclusion : Travailler sur la connectivité entre entreprises et usagers m'a permis de développer une perspective plus large sur les systèmes d'information. Il ne s'agit pas seulement de relier des points, mais de garantir que chaque connexion soit optimale et sécurisée, ce qui est essentiel pour le bon fonctionnement des organisations.</p>
+                <p>Plan d'action : Je vais continuer à me former sur les meilleures pratiques de mise en réseau sécurisée et à explorer les technologies émergentes comme le SD-WAN pour proposer des solutions de connectivité flexibles et sécurisées aux entreprises.</p>
+            </div>
+            <div class="skills-description-card">
+                <h3>Créer des outils et des applications informatiques pour les R&T (RT3)</h3>
+                <p>Description : Pour cette compétence, j'ai eu l'occasion de concevoir des outils et des applications afin de répondre aux besoins spécifiques des réseaux et des technologies. J'ai utilisé différents langages de programmation pour développer des solutions efficaces et adaptées, tout en prenant en compte l'optimisation des performances et la sécurité. J'ai également eu l'opportunité de travailler sur des projets en équipe, où la collaboration a été essentielle pour le bon déroulement des tâches.</p>
+                <p>Sentiments : Créer des outils m'a donné un sentiment de fierté, car cela me permettait de répondre directement à des problèmes concrets et d'améliorer les performances des systèmes. C'était également une expérience stimulante sur le plan technique, car j'ai dû résoudre des défis complexes et trouver des solutions novatrices. Cependant, il y avait aussi des moments où des bugs ou des imprévus ralentissaient l'avancement, ce qui apportait une certaine frustration. Mais une fois le problème résolu, la satisfaction était immense.</p>
+                <p>Évaluation : L'expérience a été largement positive, même si la phase de création a été semée d'embûches. J'ai acquis une meilleure compréhension de l'importance de la collaboration dans le développement d'outils et d'applications. Les retours des utilisateurs ont été essentiels pour ajuster les fonctionnalités et assurer que les outils répondent réellement aux besoins des usagers. J'ai également appris à mieux gérer le cycle de développement, en particulier la phase de test.</p>
+                <p>Analyse : Ce travail m’a montré que la création d'outils et d’applications n’est pas seulement une question de développement technique, mais aussi de prise en compte des attentes des utilisateurs. Chaque projet nécessite une phase d'écoute des besoins, de collecte des retours et d'adaptation pour obtenir un produit final qui soit réellement utile. Le processus de création demande de la rigueur, mais aussi de la flexibilité et une bonne gestion du temps pour éviter les retards.</p>
+                <p>Conclusion : La création d’outils et d’applications informatiques est un processus qui requiert une compréhension approfondie des besoins techniques et humains. Il est essentiel de rester à l'écoute des utilisateurs et de s'assurer que les solutions proposées sont viables à long terme, tant sur le plan technique qu'opérationnel.</p>
+                <p>Plan d'action : Pour la suite, je vais me concentrer sur l’apprentissage de nouvelles méthodologies de développement, notamment en matière d'intégration continue et de gestion de projets agiles, pour mieux répondre aux attentes des utilisateurs tout en améliorant l'efficacité du processus de création.</p>
+            </div>
+        </div>
+
+        <a href="refbut3.xlsx" class="download-button" download>Télécharger le référentiel</a>
+    </div>
+</body>
 {% endblock %}
-    

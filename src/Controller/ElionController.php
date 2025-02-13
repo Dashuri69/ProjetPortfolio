@@ -50,4 +50,11 @@ class ElionController extends AbstractController
             'controller_name' => 'ElionController',
         ]);
     }
+    #[Route('/page7', name: 'app_page7')]
+    public function page7(): Response
+    {
+        return $this->render('site/page7.html.twig', [
+            'controller_name' => 'ElionController',
+        ]);
+    }
 }
